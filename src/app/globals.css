@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@source "./**/*.{ts,tsx,mdx}";
+@source "../components/**/*.{ts,tsx,mdx}";
+
+:root {
+  --background: #0a0b0f;
+  --foreground: #e7e7ea;
+}
+
+/* Global base styles */
+html { scroll-behavior: smooth; }
+body  {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Starry background */
+.starfield {
+  background-color: #0a0b0f;
+  background-image:
+    radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,.18), transparent),
+    radial-gradient(1.5px 1.5px at 180px 120px, rgba(255,255,255,.15), transparent),
+    radial-gradient(1px 1px at 90px 200px, rgba(255,255,255,.12), transparent);
+  background-size: 220px 220px;
+  background-attachment: fixed;
+}
+
+/* Glass card + gradient text helpers */
+.glass {
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(8px);
+  border-radius: 1rem;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+}
+.text-gradient {
+  background: linear-gradient(90deg, #c7a6ff, #7aa2ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
