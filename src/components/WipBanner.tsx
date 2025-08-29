@@ -24,7 +24,7 @@ export default function WipBanner() {
           <span className="text-xl">⚠️</span>
           <p className="text-sm">
             This site is <strong>under active construction</strong>. Some sections are placeholders while I finish the build.
-            In the meantime, view my <a href="/Resume.pdf" className="underline hover:no-underline">resume</a> or{" "}
+            In the meantime, view my <a href="/Rushikesh_Joshi_Resume.pdf" className="underline hover:no-underline">resume</a> or{" "}
             <Link href="#contact" className="underline hover:no-underline">contact me</Link>.
           </p>
           <button

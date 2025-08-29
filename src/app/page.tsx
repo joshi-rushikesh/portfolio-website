@@ -29,10 +29,9 @@ export default function Page() {
               <Link href="#contact" className="glass px-4 py-2 hover:bg-white/10">
                 Book a meeting
               </Link>
-              {/* Drop your resume into /public/Resume.pdf later */}
-              <a href="/Resume.pdf" className="glass px-4 py-2 hover:bg-white/10">
+              <a href="/Rushikesh_Joshi_Resume.pdf" className="glass px-4 py-2 hover:bg-white/10">
                 Download resume
-              </a>
+              </a> 
             </div>
           </div>
 
