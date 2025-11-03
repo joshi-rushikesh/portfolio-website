@@ -162,7 +162,7 @@ export default function Page() {
                   ))}
                 </ul>
                 <Link href={`/experience/${job.slug}`} className="mt-3 inline-block text-sm text-violet-300 hover:underline">
-                  View proofs (screens, emails, analytics) →
+                  View details (screens, emails, analytics) →
                 </Link>
               </div>
             </li>

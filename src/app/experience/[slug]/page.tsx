@@ -46,7 +46,7 @@ export default async function ExperiencePage({
         </div>
       </Section>
 
-      <Section id="exp-proof" title="Proof & Artifacts">
+      <Section id="exp-proof" title="Artifacts">
         <ProofGallery images={ex.gallery} />
       </Section>
     </>

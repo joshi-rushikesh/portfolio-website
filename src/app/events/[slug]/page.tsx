@@ -49,7 +49,7 @@ export default async function EventPage({
         </div>
       </Section>
 
-      <Section id="event-proof" title="Photos & Proof">
+      <Section id="event-proof" title="Photos">
         <ProofGallery images={e.gallery} />
       </Section>
     </>
