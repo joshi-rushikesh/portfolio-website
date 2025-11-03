@@ -2,7 +2,14 @@ import Section from "@/components/Section";
 import Image from "next/image";
 import Link from "next/link";
 import BookingButton from "@/components/BookingButton";
-import { events } from "@/data/events"; // <-- NEW: pull covers/titles/dates/links from one source
+import { events } from "@/data/events";
+import { LinkedInIcon, GitHubIcon, LinkIcon } from "@/components/Icons";
+
+const LINKS = {
+  linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/joshi-rushikesh",
+  github: process.env.NEXT_PUBLIC_GITHUB_URL || "https://github.com/joshi-rushikesh",
+  linktree: process.env.NEXT_PUBLIC_LINKTREE_URL || "https://linktr.ee/rushikeshjoshi",
+};
 
 export default function Page() {
   return (
@@ -10,6 +17,7 @@ export default function Page() {
       {/* HERO */}
       <Section id="home" className="pt-10">
         <div className="grid items-center gap-8 md:grid-cols-2">
+          {/* Left: intro + CTAs */}
           <div>
             <p className="text-sm uppercase tracking-widest text-zinc-400">Portfolio</p>
             <h1 className="mt-2 text-4xl font-bold leading-tight md:text-5xl">
@@ -22,30 +30,63 @@ export default function Page() {
               This site is a quick tour of my events, experience, proofs, and ways to get in touch.
             </p>
 
-            <div className="mt-6 flex flex-wrap gap-3">
-              <Link href="#experience" className="glass px-4 py-2 hover:bg-white/10">
-                Explore my work
-              </Link>
-              <Link href="#contact" className="glass px-4 py-2 hover:bg-white/10">
-                Book a meeting
-              </Link>
-              <a href="/Rushikesh_Joshi_Resume.pdf" className="glass px-4 py-2 hover:bg-white/10">
+            {/* Social CTAs*/}
+            <div className="mt-6 grid max-w-xl grid-cols-1 gap-3 sm:grid-cols-3">
+              <a
+                href={LINKS.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass inline-flex w-full items-center justify-center gap-2 px-4 py-3 hover:bg-white/10"
+                aria-label="LinkedIn"
+              >
+                <LinkedInIcon size={18} /> LinkedIn
+              </a>
+
+              <a
+                href={LINKS.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass inline-flex w-full items-center justify-center gap-2 px-4 py-3 hover:bg-white/10"
+                aria-label="GitHub"
+              >
+                <GitHubIcon size={18} /> GitHub
+              </a>
+
+              <a
+                href={LINKS.linktree}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass inline-flex w-full items-center justify-center gap-2 px-4 py-3 hover:bg-white/10"
+                aria-label="Linktree"
+              >
+                <LinkIcon size={18} /> Linktree
+              </a>
+
+              <a
+                href="/Rushikesh_Joshi_Resume.pdf"
+                className="glass col-span-1 w-full text-center px-4 py-3 hover:bg-white/10 sm:col-span-3"
+              >
                 Download resume
               </a>
             </div>
           </div>
 
-          <div className="glass p-4">
-            <Image
-              src="/next.svg"
-              alt=""
-              width={640}
-              height={360}
-              className="w-full rounded-lg object-contain"
-            />
+          {/* Right: my photo */}
+          <div className="glass overflow-hidden p-0">
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src="/picture_of_me.png"
+                alt="Rushikesh Joshi in Chicago"
+                fill
+                className="object-cover"
+                priority
+                sizes="(min-width: 768px) 50vw, 100vw"
+              />
+            </div>
           </div>
         </div>
       </Section>
+
 
       {/* EVENTS */}
       <Section id="events" title="Events">
@@ -62,7 +103,7 @@ export default function Page() {
                   src={e.cover ?? "/next.svg"}
                   alt={e.title}
                   fill
-                  className="object-cover"       
+                  className="object-cover"
                   sizes="(min-width:1024px) 33vw, 100vw"
                 />
               </div>
@@ -205,3 +246,4 @@ export default function Page() {
     </>
   );
 }
+      
