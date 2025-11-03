@@ -2,6 +2,7 @@ import Section from "@/components/Section";
 import Image from "next/image";
 import Link from "next/link";
 import BookingButton from "@/components/BookingButton";
+import { events } from "@/data/events"; // <-- NEW: pull covers/titles/dates/links from one source
 
 export default function Page() {
   return (
@@ -50,22 +51,29 @@ export default function Page() {
       <Section id="events" title="Events">
         <p className="mb-6 text-zinc-300">
           Conferences, hackathons, meetups, and community work. Each card links to a detail page with
-          photos, emails, and metrics.
+          photos and more information.
         </p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            { title: "Chicago Creator Tech Week", slug: "creator-tech-week-2025" },
-            { title: "SparkHacks", slug: "sparkhacks-2025" },
-            { title: "1 Million Cups", slug: "1-million-cups" },
-          ].map((t, i) => (
-            <article key={i} className="glass p-4">
+          {events.map((e) => (
+            <article key={e.slug} className="glass p-4">
               <div className="relative h-40 w-full overflow-hidden rounded-lg bg-white/5">
-                <Image src="/vercel.svg" alt="" fill className="object-contain p-6" />
+                <Image
+                  src={e.cover ?? "/next.svg"}
+                  alt={e.title}
+                  fill
+                  className="object-cover"       
+                  sizes="(min-width:1024px) 33vw, 100vw"
+                />
               </div>
-              <h3 className="mt-4 text-lg font-semibold">{t.title}</h3>
-              <p className="mt-2 text-sm text-zinc-400">Chicago, IL • 2025</p>
-              <Link href={`/events/${t.slug}`} className="mt-3 inline-block text-sm text-violet-300 hover:underline">
+              <h3 className="mt-4 text-lg font-semibold">{e.title}</h3>
+              <p className="mt-2 text-sm text-zinc-400">
+                {e.location} • {e.date}
+              </p>
+              <Link
+                href={`/events/${e.slug}`}
+                className="mt-3 inline-block text-sm text-violet-300 hover:underline"
+              >
                 View details →
               </Link>
             </article>
@@ -127,14 +135,14 @@ export default function Page() {
           <div className="glass p-5 md:col-span-2">
             <h3 className="font-semibold">Who I am</h3>
             <p className="mt-2 text-zinc-300">
-              Senior CS (Finance minor) at UIC. Product-minded builder; I like shipping fast,
-              measuring impact, and iterating. Into data, growth, and clean UX.
+              CS + Finance Alum @ University of Illinois Chicago. Product-minded builder; I like shipping fast,
+              measuring impact, and iterating. Into data, growth, and reliability.
             </p>
           </div>
           <div className="glass p-5">
             <h3 className="font-semibold">Tech</h3>
             <p className="mt-2 text-zinc-300">
-              TypeScript, Next.js, Tailwind, Supabase, SQL, Python, GA4, PostHog, AWS EC2.
+              Networking, TypeScript, Next.js, Tailwind, Supabase, SQL, Python, GA4, PostHog, AWS EC2.
             </p>
           </div>
         </div>
@@ -181,7 +189,7 @@ export default function Page() {
               <li>
                 LinkedIn:{" "}
                 <a className="text-violet-300 hover:underline" href="https://www.linkedin.com/in/joshi-rushikesh">
-                  /in/joshi-rushikesh
+                  linkedin.com/in/joshi-rushikesh
                 </a>
               </li>
               <li>
