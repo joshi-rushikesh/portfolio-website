@@ -42,14 +42,14 @@ export const events: EventItem[] = [
     type: "hackathon",
   },
   {
-    slug: "1-million-cups",
-    title: "1 Million Cups",
-    date: "2025",
+    slug: "uic-expo-2024",
+    title: "UIC Engineering Design Expo",
+    date: "April 2024",
     location: "Chicago, IL",
-    cover: "/events/1mc/cover.jpg",
-    summary: "Startup community meetups—product feedback & pitch practice.",
-    gallery: ["/events/1mc/1.jpg"],
-    type: "meetup",
+    cover: "/events/uicexpo/cover.png",
+    summary: "Presented in front of judges at the event. Our project, BotaniCare, is a plant care system that monitors plant health, tracking soil moisture, light levels, room temperature, and humidity. LEDs cycle on and off to simulate day and night, and the system waters the plant as needed. Arduinos collected data via attached sensors and communicated via a chain link process to control the water and lights. We built BotaniCare for about $60 and the system could be scaled to accommodate additional plants with more hardware.",
+    gallery: ["/events/uicexpo/cover.png"],
+    type: "conference",
   },
 ];
 

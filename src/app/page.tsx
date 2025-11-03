@@ -4,6 +4,8 @@ import Link from "next/link";
 import BookingButton from "@/components/BookingButton";
 import { events } from "@/data/events";
 import { LinkedInIcon, GitHubIcon, LinkIcon } from "@/components/Icons";
+import { experience as experienceData } from "@/data/experience";
+
 
 const LINKS = {
   linkedin: process.env.NEXT_PUBLIC_LINKEDIN_URL || "https://www.linkedin.com/in/joshi-rushikesh",
@@ -23,11 +25,12 @@ export default function Page() {
             <h1 className="mt-2 text-4xl font-bold leading-tight md:text-5xl">
               Rushikesh Joshi
               <br />
-              <span className="text-gradient">Product & Software</span>
+              <span className="text-gradient">Customer-First Builder</span>
             </h1>
             <p className="mt-4 max-w-xl text-zinc-300">
-              I build and ship useful things—web apps, growth campaigns, and data-driven features.
-              This site is a quick tour of my events, experience, proofs, and ways to get in touch.
+              I build and ship useful things: reliable systems, data pipelines, user-friendly products, and growth campaigns.
+              I focus on customer impact and measurable outcomes. This site is a quick tour of my events, experience, results,
+              and ways to get in touch.
             </p>
 
             {/* Social CTAs*/}
@@ -125,29 +128,8 @@ export default function Page() {
       {/* EXPERIENCE */}
       <Section id="experience" title="Experience">
         <ol className="relative ml-3 border-l border-white/10">
-          {[
-            {
-              company: "ChaChing Social",
-              role: "Product Management Intern",
-              period: "May 2025 – Present",
-              bullets: [
-                "Launched Creator Tech Week growth campaign; responsive emails + GA4 plan.",
-                "Active users +242% MoM; events +232%; conversions +25%.",
-              ],
-              slug: "chaching-social",
-            },
-            {
-              company: "Joshi Goods",
-              role: "Founder & Biz Ops Lead",
-              period: "Mar 2021 – Jul 2024",
-              bullets: [
-                "300+ products, 2,700+ orders, $1M+ lifetime revenue across marketplaces.",
-                "SQL dashboards for customer analytics and trend detection.",
-              ],
-              slug: "joshi-goods",
-            },
-          ].map((job, idx) => (
-            <li key={idx} className="mb-10 ml-4">
+          {experienceData.map((job, idx) => (
+            <li key={job.slug} className="mb-10 ml-4">
               <span className="absolute -left-2 mt-2 h-3 w-3 rounded-full bg-violet-300" />
               <div className="glass p-4">
                 <div className="flex flex-wrap items-center justify-between gap-2">
@@ -156,12 +138,18 @@ export default function Page() {
                   </h3>
                   <span className="text-sm text-zinc-400">{job.period}</span>
                 </div>
-                <ul className="mt-2 list-disc pl-5 text-zinc-300">
-                  {job.bullets.map((b, i) => (
-                    <li key={i}>{b}</li>
-                  ))}
-                </ul>
-                <Link href={`/experience/${job.slug}`} className="mt-3 inline-block text-sm text-violet-300 hover:underline">
+                <p className="mt-2 text-zinc-300">{job.summary}</p>
+                {job.bullets?.length > 0 && (
+                  <ul className="mt-2 list-disc pl-5 text-zinc-300">
+                    {job.bullets.map((b, i) => (
+                      <li key={i}>{b}</li>
+                    ))}
+                  </ul>
+                )}
+                <Link
+                  href={`/experience/${job.slug}`}
+                  className="mt-3 inline-block text-sm text-violet-300 hover:underline"
+                >
                   View details (screens, emails, analytics) →
                 </Link>
               </div>
@@ -169,6 +157,7 @@ export default function Page() {
           ))}
         </ol>
       </Section>
+
 
       {/* ABOUT */}
       <Section id="about" title="About">

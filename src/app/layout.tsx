@@ -8,7 +8,7 @@ const figtree = Figtree({ subsets: ["latin"] });
 const IS_WIP = process.env.NEXT_PUBLIC_WIP === "1";
 
 export const metadata: Metadata = {
-  title: "Rushikesh Joshi — Portfolio",
+  title: "Rushikesh Joshi - Portfolio",
   description: "Product-focused developer & PM. Projects, experience, events, and more.",
   robots: { index: !IS_WIP, follow: !IS_WIP }, // hide from SEO while WIP
 };

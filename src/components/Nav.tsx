@@ -8,10 +8,10 @@ const links = [
   { href: "/#events", label: "Events" },
   { href: "/#experience", label: "Experience" },
   { href: "/#about", label: "About" },
-  { href: "/#crypto", label: "Crypto" },
+  // { href: "/#crypto", label: "Crypto" },
   { href: "/#contact", label: "Contact" },
-  { href: "/book", label: "Book" },
-  { href: "/certificates", label: "Certificates" },
+  // { href: "/book", label: "Book" },
+  // { href: "/certificates", label: "Certificates" },
 ];
 
 export default function Nav() {
