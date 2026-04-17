@@ -22,10 +22,10 @@ export default function Page() {
           {/* Left: intro + CTAs */}
           <div>
             <p className="text-sm uppercase tracking-widest text-zinc-400">Portfolio</p>
-            <h1 className="mt-2 text-4xl font-bold leading-tight md:text-5xl">
+            <h1 className="mt-2 text-4xl font-bold leading-tight md:text-5xl text-gradient">
               Rushikesh Joshi
               <br />
-              <span className="text-gradient">Customer-First Builder</span>
+              <span className="text-gradient"></span>
             </h1>
             <p className="mt-4 max-w-xl text-zinc-300">
               I build and ship useful things: reliable systems, data pipelines, user-friendly products, and growth campaigns.

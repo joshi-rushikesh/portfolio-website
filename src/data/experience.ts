@@ -14,15 +14,15 @@ export const experience: ExperienceItem[] = [
   {
     slug: "chaching-social",
     company: "ChaChing Social",
-    role: "Product Management Intern",
+    role: "Product & Software Engineer Intern",
     period: "May 2025 – Present",
     summary:
-      "Shipped Creator Tech Week growth campaign (microsite + RSVP), responsive HTML emails, and GA4/UTM plan. Structured QA uncovered issues and improved onboarding + conversion.",
+      "",
     bullets: [
-      "Active users +242% MoM (511 → 1,759); page views +244% (1.8K → 6.2K); events +232% (4.5K → 15K); engaged sessions/user +23% (0.61 → 0.75).",
-      "Authored structured QA reports; uncovered 20+ bugs/UX issues and drove fixes.",
-      "Growth/user research and funnel analysis led to NPS-informed improvements and +25% conversions.",
-      "Coordinated releases for Google Play, App Store, and Solana dApp.",
+      "Delivered full-stack features across ChaChing’s web (Next.js/React), backend (Go/Firestore), and mobile apps (React Native/Expo), supporting onboarding, user flows, and feature delivery.",
+      "Launched the Creator Tech Week growth campaign by shipping the microsite and RSVP flow, responsive HTMLemails, and a UTM/GA4 tracking plan, helping drive +242% MoM active user growth (511 to 1,759).",
+      "Conducted user research, market analysis, and funnel analysis to identify onboarding blockers, informing feature improvements that increased conversion by 25%.",
+      "Built KPI reports and dashboards using GA4 and PostHog data to track performance for product decisions.",
     ],
     cover: "/proof/chaching/cover.png",
     gallery: [
@@ -35,12 +35,12 @@ export const experience: ExperienceItem[] = [
   {
     slug: "joshi-goods",
     company: "Joshi Goods",
-    role: "Founder & Business Operations Lead",
+    role: "Business Operations Lead",
     period: "Mar 2021 – Jul 2024",
     summary:
       "Operated multi-channel e-commerce & local marketplace portfolio; analytics-driven sourcing, automation and dashboards for ops.",
     bullets: [
-      "300+ products, 2,700+ orders, $1M+ lifetime revenue (Amazon/eBay/Shopify).",
+      "120+ products, 2,400+ orders, $500,000+ lifetime revenue (Amazon/eBay/Shopify).",
       "Custom SQL databases for orders/sales analytics boosted productivity by 50%+.",
       "Python requests/BeautifulSoup/Selenium for pricing & demand intel; reduced manual work.",
       "AWS EC2 Windows RDP to run real-time scraping & sourcing operations.",
