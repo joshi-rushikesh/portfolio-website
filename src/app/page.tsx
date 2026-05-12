@@ -65,12 +65,12 @@ export default function Page() {
                 <LinkIcon size={18} /> Linktree
               </a>
 
-              <a
+              {/* <a
                 href="/Rushikesh_Joshi_Resume.pdf"
                 className="glass col-span-1 w-full text-center px-4 py-3 hover:bg-white/10 sm:col-span-3"
               >
                 Download resume
-              </a>
+              </a> */}
             </div>
           </div>
 

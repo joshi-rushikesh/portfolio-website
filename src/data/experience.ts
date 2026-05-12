@@ -13,8 +13,8 @@ export type ExperienceItem = {
 export const experience: ExperienceItem[] = [
   {
     slug: "chaching-social",
-    company: "ChaChing Social",
-    role: "Product & Software Engineer Intern",
+    company: "Duh Social (formerly ChaChing Social)",
+    role: "Product & Software Engineer",
     period: "May 2025 – Present",
     summary:
       "",
@@ -35,7 +35,7 @@ export const experience: ExperienceItem[] = [
   {
     slug: "joshi-goods",
     company: "Joshi Goods",
-    role: "Business Operations Lead",
+    role: "Technical Operations Lead (Founder)",
     period: "Mar 2021 – Jul 2024",
     summary:
       "Operated multi-channel e-commerce & local marketplace portfolio; analytics-driven sourcing, automation and dashboards for ops.",
@@ -61,7 +61,7 @@ export const experience: ExperienceItem[] = [
     role: "Automation Engineer (Contract)",
     period: "Apr 2022 – Aug 2023",
     summary:
-      "Delivered custom web automations with BrowserAutomationStudio; helped launch Glowie.app and shipped scripts for 150+ customers.",
+      "Delivered custom web automations with BrowserAutomationStudio; helped launch Glowie.app and shipped scripts for 100+ customers.",
     bullets: [
       "100+ automation scripts (e.g., IMAP bots, review-request bots).",
       "Provided launch advantage for NFT/crypto token campaigns.",
